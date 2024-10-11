@@ -6,17 +6,21 @@
 // alert(str)
 
 
+
+
 // q2
 // var num = +prompt("Enter number");
 // if (num > 0){
-//     alert("The number is positive")
+//     alert("The number is positive.")
 // }
 // else if(num < 0){
-//     alert("The number is negative")
+//     alert("The number is negative.")
 // }
 // else if(num==0){
-//     alert("The number is zero")
+//     alert("The number is zero.")
 // }
+
+
 
 
 // q3
@@ -33,6 +37,8 @@
 
 // var avg = sum/5;
 // alert("The average score is "+avg+".");
+
+
 
 
 // q4
