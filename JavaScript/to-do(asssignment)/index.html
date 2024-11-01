@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        .todosContainer {
+            width: 250px;
+            min-height: 100px;
+            background-color: #d1e7dd;
+            border: 2px solid #0f5132;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .todo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 1px solid #0f5132;
+            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+
+        .todo button {
+            margin-left: 5px;
+            padding: 4px 8px;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .todo button:hover {
+            background-color: #ffcd39;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="inp" type="text" placeholder="Enter a todo task"/>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <div id="todos" class="todosContainer">
+    
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
