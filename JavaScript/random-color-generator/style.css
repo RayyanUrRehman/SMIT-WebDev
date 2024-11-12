@@ -1,0 +1,26 @@
+#main{
+    height: 500px;
+    text-align: center;
+}
+
+
+#btn{
+    margin-top: 20px;
+    padding: 7px;
+}
+
+#box{
+    height: 200px;
+    width: 700px;
+    margin-left: 27%;
+    margin-top: 30px;
+    border: solid black 2px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
