@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+}
+
+#box-container{
+    width: fit-content;
+    display: flex-col;
+    margin: auto;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    margin: 30px;
+    border-radius: 20%;
+    border: solid black 5px;
+}
+
+#line-1{
+    display: flex;
+}
+
+#line-2{
+    display: flex;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.yellow{
+    background-color: yellow;
+}
