@@ -65,10 +65,20 @@ function levelUp()
             }
         }
         else{
+            redScreen();
             restart();
         }
     }
 
+}
+
+function redScreen()
+{
+    var id = document.querySelector('body');
+    id.classList.add('redScreen');
+    setTimeout(function(){
+        id.classList.remove('redScreen');
+    },50);
 }
 
 function checkUser()
