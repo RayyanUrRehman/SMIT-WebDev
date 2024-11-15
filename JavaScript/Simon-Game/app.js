@@ -3,7 +3,7 @@ var userSeq = []
 var colors = ["red","green","yellow","purple"];
 
 var started = false;
-var level = 2;
+var level = 1;
 
 var h3 = document.querySelector('h3');
 
@@ -13,12 +13,13 @@ Body.addEventListener('keypress',startgame);
 var box = document.querySelectorAll('.box');
 for( b of box){
     b.addEventListener('click',checkUser);
+    
 }
 
 function startgame()
 {
     if (started == false){
-        h3.innerText = "Level 1";
+        h3.innerHTML = `Level ${level}`;
         started = true;
         random();
     }
@@ -31,7 +32,15 @@ function blink(idx)
     setTimeout(function(){
         id.classList.remove('black');
     },100);
+}
 
+function blinkWhite(idx)
+{
+    var id = document.getElementById(idx);
+    id.classList.add('white');
+    setTimeout(function(){
+        id.classList.remove('white');
+    },100);
 }
 
 function random()
@@ -40,18 +49,42 @@ function random()
     var toBlink = colors[num];
     blink(toBlink);
     gameSeq.push(toBlink);
+    console.log(gameSeq)
 }
 
 function levelUp()
 {
-    if (userSeq.length == gameSeq.length){
-        h3.innerHTML = `Level ${level}`;
-        level++;
 
+    for (var i=0;i<userSeq.length;i++){
+        if (userSeq[i] == gameSeq[i]){
+            if (userSeq.length == gameSeq.length){
+                h3.innerHTML = `Level ${level}`;
+                level++;
+                userSeq = [];
+                setTimeout(random,1000);
+            }
+        }
+        else{
+            restart();
+        }
     }
+
 }
 
 function checkUser()
 {
-    console.log("hello")
+    var btn = this.id;
+    blinkWhite(btn);
+    userSeq.push(btn);
+    console.log(userSeq);
+    levelUp()
+}
+
+function restart()
+{
+    h3.innerHTML = `GAME OVER! You score was ${level}. <br> Press any key to restart`
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 1;
 }

@@ -26,21 +26,30 @@ body{
 }
 
 .red{
-    background-color: red;
+    background-color: #d95980;
 }
 
 .green{
-    background-color: green;
+    background-color: #63aac0;
 }
 
 .purple{
-    background-color: purple;
+    background-color: #819ff9;
 }
 
 .yellow{
-    background-color: yellow;
+    background-color: #f99b45;
 }
 
 .black{
     background-color: black;
 }
+
+.white{
+    background-color: white;
+}
+
+.redScreen{
+    background-color: red;
+}
+
