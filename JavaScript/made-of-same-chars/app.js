@@ -30,3 +30,4 @@ else{
     console.log("Both strings are NOT anagrams!")
 
 }
+ 
