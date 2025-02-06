@@ -21,7 +21,7 @@ class Student extends Person {
     }
 
     public getStudentInfo(): string {
-        return `${this.getDetails()} They are in grade ${this.grade}.`;
+        return `${this.getDetails()} He is in grade ${this.grade}.`;
     }
 }
 
